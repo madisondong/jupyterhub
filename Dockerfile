@@ -10,8 +10,6 @@ RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyau
 
 RUN npm install -g configurable-http-proxy
 
-COPY jupyterhub_config.py .
-
 EXPOSE 8000
 
 CMD ["jupyterhub", "-f", "jupyterhub_config.py"]
