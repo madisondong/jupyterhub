@@ -13,9 +13,7 @@ COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyauthenticator jupyterhub notebook jupyterlab
 
 RUN npm install -g configurable-http-proxy
-RUN mkdir -p /home/admin
 RUN useradd -m admin
-RUN chown -R 1000:1000 /home/admin
 
 
 EXPOSE 8000
