@@ -6,14 +6,11 @@ WORKDIR /srv/jupyterhub
 
 RUN git clone https://github.com/jupyterhub/jupyterhub.git /srv/jupyterhub
 
-RUN pip install --upgrade pip && pip install .
+RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyauthenticator
 
 RUN npm install -g configurable-http-proxy
 
-RUN useradd -m admin && echo "admin:admin" | chpasswd
-
-
-# COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
+#COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
 EXPOSE 8000
 
