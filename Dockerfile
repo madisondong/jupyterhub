@@ -13,6 +13,8 @@ RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyau
 RUN npm install -g configurable-http-proxy
 RUN mkdir -p /home/admin
 RUN useradd -m admin
+RUN chown -R 1000:1000 /home/admin
+
 
 EXPOSE 8000
 
