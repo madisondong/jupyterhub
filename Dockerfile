@@ -1,6 +1,8 @@
 FROM python:3.11-slim
 
 RUN apt-get update && apt-get install -y npm nodejs git
+RUN apt-get update && apt-get install -y sudo adduser
+
 
 WORKDIR /srv/jupyterhub
 
