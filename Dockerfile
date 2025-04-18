@@ -8,7 +8,8 @@ RUN git clone https://github.com/jupyterhub/jupyterhub.git /srv/jupyterhub
 
 COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
-RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyauthenticator
+RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyauthenticato
+RUN pip install jupyterhub notebook jupyterlab
 
 RUN npm install -g configurable-http-proxy
 
