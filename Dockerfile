@@ -14,7 +14,7 @@ RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyau
 RUN npm install -g configurable-http-proxy
 
 # Pre-create admin
-RUN useradd -m admin
+RUN useradd -m admin && useradd -m alice
 
 EXPOSE 8000
 
