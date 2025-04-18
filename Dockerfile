@@ -10,7 +10,7 @@ RUN pip install --upgrade pip && pip install .
 
 RUN npm install -g configurable-http-proxy
 
-COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
+# COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
 EXPOSE 8000
 
