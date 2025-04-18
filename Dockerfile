@@ -10,6 +10,9 @@ RUN pip install --upgrade pip && pip install .
 
 RUN npm install -g configurable-http-proxy
 
+RUN useradd -m admin && echo "admin:admin" | chpasswd
+
+
 # COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 
 EXPOSE 8000
