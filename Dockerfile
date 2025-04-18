@@ -14,4 +14,4 @@ RUN npm install -g configurable-http-proxy
 
 EXPOSE 8000
 
-CMD ["jupyterhub", "-f", "/srv/jupyterhub/jupyterhub_config.py"]
+CMD ["jupyterhub"]
