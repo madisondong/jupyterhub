@@ -1,8 +1,7 @@
-FROM python:3.11-slim
+FROM python:3.11
 
-RUN apt-get update && apt-get install -y npm nodejs git
-RUN apt-get update && apt-get install -y sudo adduser
-
+# Install system dependencies
+RUN apt-get update && apt-get install -y npm nodejs git sudo adduser bash coreutils
 
 WORKDIR /srv/jupyterhub
 
@@ -13,8 +12,9 @@ COPY jupyterhub_config.py /srv/jupyterhub/jupyterhub_config.py
 RUN pip install --upgrade pip && pip install . && pip install jupyterhub-dummyauthenticator jupyterhub notebook jupyterlab
 
 RUN npm install -g configurable-http-proxy
-RUN useradd -m admin
 
+# Pre-create admin
+RUN useradd -m admin
 
 EXPOSE 8000
 
