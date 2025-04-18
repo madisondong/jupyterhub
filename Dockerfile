@@ -1,7 +1,7 @@
 FROM python:3.11
 
 # Install system dependencies
-RUN apt-get update && apt-get install -y npm nodejs git sudo adduser bash coreutils
+RUN apt-get update && apt-get install -y npm nodejs git sudo adduser bash coreutils passwd login
 
 WORKDIR /srv/jupyterhub
 
