@@ -17,4 +17,4 @@ RUN useradd -m admin && echo "admin:admin" | chpasswd
 
 EXPOSE 8000
 
-CMD ["jupyterhub"]
+CMD ["jupyterhub", "-f", "jupyterhub_config.py"]
