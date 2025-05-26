@@ -62,8 +62,8 @@ for administration of the Hub and its users.
   - If you are using **`conda`**, the nodejs and npm dependencies will be installed for
     you by conda.
 
-  - If you are using **`pip`**, install a recent version (at least 12.0) of
-    [nodejs/npm](https://docs.npmjs.com/getting-started/installing-node).
+  - If you are using **`pip`**, install a recent Long-Term Support (LTS) version (e.g., 18.x or 20.x) of
+    [nodejs/npm](https://docs.npmjs.com/downloading-and-installing-node-js-and-npm/). This is required for `configurable-http-proxy`, the default proxy JupyterHub uses.
 
 - If using the default PAM Authenticator, a [pluggable authentication module (PAM)](https://en.wikipedia.org/wiki/Pluggable_authentication_module).
 - TLS certificate and key for HTTPS communication
@@ -92,6 +92,9 @@ JupyterHub can be installed with `pip`, and the proxy with `npm`:
 
 ```bash
 npm install -g configurable-http-proxy
+```
+
+```bash
 python3 -m pip install jupyterhub
 ```
 
